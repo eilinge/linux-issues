@@ -17,3 +17,6 @@ $sudo apt-get install libxml2-dev
 chkconfig connot run
 apt-get install sysv-rc-conf
 cp /usr/sbin/sysv-rc-conf /usr/sbin/chkconfig
+
+linux 定时任务
+https://www.cnblogs.com/zoulongbin/p/6187238.html
