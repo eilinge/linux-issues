@@ -1,0 +1,16 @@
+E: Unable to correct problems, you have held broken packages 解决方法
+
+$sudo apt-get install aptitude
+$aptitude why-not libxml2
+p   shared-mime-info:i386 Provides shared-mime-info                  
+p   shared-mime-info:i386 Depends  libxml2:i386 (>= 2.7.4)           
+p   libxml2:i386          Breaks   libxml2 (!= 2.7.8.dfsg-5.1ubuntu4)
+
+$dpkg -l | grep libxml2
+找到已经安装的对应的libxml2包
+$sudo dpkg --purge --force-all libxml2
+# 删除libxml2，并删除其他所有依赖包，--force-all参数很重要
+$sudo apt-get -f install
+# 强制安装欠缺的包
+$sudo apt-get install libxml2-dev
+
