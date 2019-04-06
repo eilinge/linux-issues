@@ -14,3 +14,6 @@ $sudo apt-get -f install
 # 强制安装欠缺的包
 $sudo apt-get install libxml2-dev
 
+chkconfig connot run
+apt-get install sysv-rc-conf
+cp /usr/sbin/sysv-rc-conf /usr/sbin/chkconfig
